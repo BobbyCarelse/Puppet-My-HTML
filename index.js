@@ -10,6 +10,10 @@ app.use(express.json());
 app.use(cors());
 app.use(apiLimiter);
 
+app.get("/", (req, res) => {
+  res.send("Welcome to Puppet My HTML!").status(200);
+});
+
 app.post("/create-pdf", async (req, res) => {
   try {
     const { pdfFile } = await htmlToPDF(req.body);
