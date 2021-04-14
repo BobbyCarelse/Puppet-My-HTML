@@ -15,4 +15,4 @@ Puppet my HTML is an api that converts the given HTML (in `UT-8` format) to a pd
        fs.writeFileSync(FILE_PATH_GOES_HERE, buff)
       ```
 
-## Author | [Bobby Carelse](https://bobbycarelse.co.za)
+### Author | [Bobby Carelse](https://bobbycarelse.co.za)
