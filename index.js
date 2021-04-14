@@ -6,8 +6,13 @@ const htmlToPDF = require("./src/helpers/htmlToPDF");
 const app = express();
 const apiLimiter = rateLimit({ windowMs: 15 * 60 * 1000, max: 50 });
 
+const corsOptions = {
+  origin: "*",
+  methods: ["GET", "POST", "HEAD"],
+};
+
 app.use(express.json());
-app.use(cors());
+app.use(cors(corsOptions));
 app.use(apiLimiter);
 
 app.get("/", (req, res) => {
